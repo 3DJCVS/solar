@@ -2,11 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+<!-- https://3djcvs.github.io/solar/ -->
   <title>Sistema Solar</title>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
-  <a-scene>
+s  <a-scene>
 
     <!-- espacio exterior  -->
     <a-sky src = "planetas/espacio.jpg"></a-sky>
@@ -16,36 +17,37 @@
     <a-sphere id="sun" 
     position="0 1.25 -5" 
     radius="3" src="planetas/sun.jpeg"
-    rotation="0 0 0" 
     animation="property: rotation; to: 0 360 0; loop: true; dur: 22224">
     </a-sphere>
 
     <!-- Mercurio -->
     <a-sphere id="mercury" 
     position="3.9 1.25 -5" 
-    radius="0.1" src="planetas/mercury.jpeg" 
-    rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 58650">
+    radius="0.1" src="planetas/mercury.jpeg"  
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 5865">
     </a-sphere>
 
     <!-- Venus -->
     <a-sphere id="venus" 
     position="7.2 1.25 -5" 
     radius="0.2" src="planetas/venus.jpeg" 
-    rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 243000">
+    rotation="0 0 0" 
+    animation="property: rotation; to: 0 -360 0; loop: true; dur: 24300">
     </a-sphere>
 
     <!-- Tierra -->
     <a-sphere id="earth" 
     position="10 1.25 -5" 
     radius="0.3" src="planetas/earth.jpeg" 
-    rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 864">
+    rotation="0 0 0"
+     animation="property: rotation; to: 0 360 0; loop: true; dur: 864">
     </a-sphere>
 
     <!-- Marte -->
     <a-sphere id="mars" 
     position="15.2 1.25 -5" 
     radius="0.2" src="planetas/mars.jpeg" rotation="0 0 0" 
-    animation="property: rotation; to: 0 360 0; loop: true; dur: 8864">
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 886.4">
     </a-sphere>
 
     <!-- Jupiter -->
@@ -53,29 +55,40 @@
     position="52 1.25 -5" 
     radius="1.5" src="planetas/jupiter.jpeg" 
     rotation="0 360 0" 
-    animation="property: rotation; to: 0 360 0; loop: true; dur: 3528">
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 352.8">
     </a-sphere>
 
-    <!-- Saturno -->
+    <!-- Saturno 
     <a-sphere id="saturn" 
     position="95 1.25 -5" 
     radius="1.2" src="planetas/saturn.jpeg" 
-    rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 3952">
+    rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 395.2">
     </a-sphere>
+    -->
+    <a-entity position="95 1.25 -5">
+        <a-sphere position="" 
+         radius="1.2" src="planetas/saturn.jpeg" 
+        rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 395.2">
+        </a-sphere>
+        
+        <a-torus id="anillo-1" color="#57524A" segments-tubular="50" radius="3.6" radius-tubular="0.1" rotation="90 0 0" scale="0.64 0.64 0.04" ></a-torus>
+        <a-torus id="anillo-2" color="#A29A87" segments-tubular="50" radius="2.8" radius-tubular="0.2" rotation="90 0 0" scale="0.64 0.64 0.04" ></a-torus>
+            
+    </a-entity>
 
     <!-- Urano -->
     <a-sphere id="uranus" 
     position="192 1.25 -5" 
     radius="0.7" src="planetas/uranus.jpeg" 
-    rotation="0 360 0" 
-    animation="property: rotation; to: 0 360 0; loop: true; dur: 60480">
+    rotation="0 0 0" 
+    animation="property: rotation; to: 3600 0 0; loop: true; dur: 604.8">
     </a-sphere>
 
     <!-- Neptuno -->
     <a-sphere id="neptune" 
     position="301 1.25 -5" 
     radius="0.7" src="planetas/neptune.jpeg" 
-    rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 54720">
+    rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 5472">
     </a-sphere>
 </body>
 </html>
