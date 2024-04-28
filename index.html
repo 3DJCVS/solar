@@ -37,10 +37,10 @@ s  <a-scene>
 
     <!-- Tierra -->
     <a-sphere id="earth" 
-    position="10 1.25 -5" 
+    
     radius="0.3" src="planetas/earth.jpeg" 
-    rotation="0 0 0"
-     animation="property: rotation; to: 0 360 0; loop: true; dur: 864">
+    position="10 1.25 -5" rotation="0 0 23.4"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 1064">
     </a-sphere>
 
     <!-- Marte -->
@@ -54,26 +54,16 @@ s  <a-scene>
     <a-sphere id="jupiter" 
     position="52 1.25 -5" 
     radius="1.5" src="planetas/jupiter.jpeg" 
-    rotation="0 360 0" 
     animation="property: rotation; to: 0 360 0; loop: true; dur: 352.8">
     </a-sphere>
 
-    <!-- Saturno 
-    <a-sphere id="saturn" 
-    position="95 1.25 -5" 
-    radius="1.2" src="planetas/saturn.jpeg" 
-    rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 395.2">
-    </a-sphere>
-    -->
-    <a-entity position="95 1.25 -5">
-        <a-sphere position="" 
+    <a-entity position="95 1.25 -5" rotation="0 0 26.7">
+        <a-sphere
          radius="1.2" src="planetas/saturn.jpeg" 
-        rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 395.2">
-        </a-sphere>
-        
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 395.2" >
         <a-torus id="anillo-1" color="#57524A" segments-tubular="50" radius="3.6" radius-tubular="0.1" rotation="90 0 0" scale="0.64 0.64 0.04" ></a-torus>
-        <a-torus id="anillo-2" color="#A29A87" segments-tubular="50" radius="2.8" radius-tubular="0.2" rotation="90 0 0" scale="0.64 0.64 0.04" ></a-torus>
-            
+        <a-torus id="anillo-2" color="#A29A87" segments-tubular="50" radius="2.8" radius-tubular="0.2" rotation="90 0 0" scale="0.64 0.64 0.04"  ></a-torus>
+      </a-sphere>        
     </a-entity>
 
     <!-- Urano -->
@@ -88,7 +78,7 @@ s  <a-scene>
     <a-sphere id="neptune" 
     position="301 1.25 -5" 
     radius="0.7" src="planetas/neptune.jpeg" 
-    rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 5472">
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 5472">
     </a-sphere>
 </body>
 </html>
