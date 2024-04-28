@@ -6,8 +6,13 @@
   <title>Sistema Solar</title>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
+
 <body>
-s  <a-scene>
+<a-scene id="Sistema_Solar">
+
+ <a-assets>
+  <a-asset-item id="ufo" src="./planetas/retro_ufo/scene.gltf"></a-asset-item>
+ </a-assets>
 
     <!-- espacio exterior  -->
     <a-sky src = "planetas/espacio.jpg"></a-sky>
@@ -58,9 +63,9 @@ s  <a-scene>
     </a-sphere>
 
     <a-entity position="95 1.25 -5" rotation="0 0 26.7">
-        <a-sphere
+      <a-sphere
          radius="1.2" src="planetas/saturn.jpeg" 
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 395.2" >
+         animation="property: rotation; to: 0 360 0; loop: true; dur: 395.2" >
         <a-torus id="anillo-1" color="#57524A" segments-tubular="50" radius="3.6" radius-tubular="0.1" rotation="90 0 0" scale="0.64 0.64 0.04" ></a-torus>
         <a-torus id="anillo-2" color="#A29A87" segments-tubular="50" radius="2.8" radius-tubular="0.2" rotation="90 0 0" scale="0.64 0.64 0.04"  ></a-torus>
       </a-sphere>        
@@ -80,5 +85,28 @@ s  <a-scene>
     radius="0.7" src="planetas/neptune.jpeg" 
     animation="property: rotation; to: 0 360 0; loop: true; dur: 5472">
     </a-sphere>
+
+    <!-- ufo
+Model Information:
+* title:	Retro UFO
+* source:	https://sketchfab.com/3d-models/retro-ufo-a198a969caed46f4b58ff30167339650
+* author:	fudailshajahan (https://sketchfab.com/fudailshajahan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Retro UFO" (https://sketchfab.com/3d-models/retro-ufo-a198a969caed46f4b58ff30167339650) by fudailshajahan (https://sketchfab.com/fudailshajahan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+  -->
+
+  <a-entity 
+  position="10 1.25 -5" 
+  gltf-model="#ufo"  
+  scale="0.1 0.1 0.1"
+  animation="property: rotation; to: 0 360 0; loop: true; dur: 850"
+  animation__2="property: position; to: 15.2 1.25 -5; dir: alternate; dur: 3500; easing: easeInOutCirc; loop: true">
+  </a-entity>
+
 </body>
 </html>
