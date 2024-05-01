@@ -5,7 +5,6 @@
 <!-- https://3djcvs.github.io/solar/ -->
   <title>Sistema Solar</title>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script> <!-- necesario para los movement controls-->
 </head>
 
 <body>
@@ -14,10 +13,6 @@
  <a-assets>
   <a-asset-item id="ufo" src="./planetas/retro_ufo/scene.gltf"></a-asset-item>
  </a-assets>
-
-  <a-entity movement-controls="fly: true">
-   <!--Pos inicial--> <a-entity camera position="10 1.25 0" look-controls wasd-controls></a-entity>
-  </a-entity>
 
     <!-- espacio exterior  -->
     <a-sky src = "planetas/espacio.jpg"></a-sky>
